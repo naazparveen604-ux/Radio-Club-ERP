@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    
+    --primary: #0284c7;
+    --primary-hover: #0369a1;
+    --primary-foreground: #ffffff;
+    
+    --secondary: #f1f5f9;
+    --secondary-hover: #e2e8f0;
+    --secondary-foreground: #0f172a;
+    
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    
+    --success: #16a34a;
+    --success-foreground: #ffffff;
+    
+    --error: #dc2626;
+    --error-foreground: #ffffff;
+    
+    --warning: #ea580c;
+    --warning-foreground: #ffffff;
+    
+    --info: #2563eb;
+    --info-foreground: #ffffff;
+    
+    --text: #0f172a;
+    --text-muted: #475569;
+    
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #0f172a;
+    --surface: #1e293b;
+    --border: #334155;
+    
+    --primary: #38bdf8;
+    --primary-hover: #7dd3fc;
+    --primary-foreground: #0284c7;
+    
+    --secondary: #1e293b;
+    --secondary-hover: #334155;
+    --secondary-foreground: #f8fafc;
+    
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    
+    --success: #22c55e;
+    --success-foreground: #ffffff;
+    
+    --error: #ef4444;
+    --error-foreground: #ffffff;
+    
+    --warning: #f97316;
+    --warning-foreground: #ffffff;
+    
+    --info: #3b82f6;
+    --info-foreground: #ffffff;
+    
+    --text: #f8fafc;
+    --text-muted: #cbd5e1;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-text font-sans antialiased;
+  }
+  
+  /* Typography overrides for consistent ERP feel */
+  h1 {
+    @apply text-3xl font-bold tracking-tight text-text;
+  }
+  h2 {
+    @apply text-2xl font-semibold tracking-tight text-text;
+  }
+  h3 {
+    @apply text-xl font-semibold tracking-tight text-text;
+  }
+  h4 {
+    @apply text-lg font-semibold tracking-tight text-text;
+  }
+  p {
+    @apply leading-7 text-text;
+  }
+}
